@@ -1,92 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Akshitha Babburi | Full Stack Developer</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akshitha Babburi | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      color: #333;
-      background: #f9f9f9;
-    }
-    header {
-      background: #2c3e50;
-      color: white;
-      padding: 2rem 1rem;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    header p {
-      font-size: 1.2rem;
-      margin-top: 0.5rem;
-    }
-    nav {
-      background: #34495e;
-      padding: 0.5rem;
-      text-align: center;
-    }
-    nav a {
-      color: white;
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    section {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 1rem;
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    h2 {
-      color: #2c3e50;
-      border-bottom: 2px solid #eee;
-      padding-bottom: 0.5rem;
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-    ul li {
-      margin-bottom: 0.8rem;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: #2c3e50;
-      color: white;
-      margin-top: 2rem;
-    }
-    .contact a {
-      color: #3498db;
-      text-decoration: none;
-    }
-  </style>
 </head>
 <body>
-  <header>
-    <h1>Akshitha Babburi</h1>
-    <p>Full Stack Developer | Java | Spring Boot | React | Cloud (AWS & Azure)</p>
-  </header>
-
+  <!-- Navigation -->
   <nav>
-    <a href="#about">About</a>
-    <a href="#experience">Experience</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
+    <div class="container">
+      <h2>Akshitha</h2>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
   </nav>
 
-  <section id="about">
+  <!-- Hero Section -->
+  <header class="hero">
+    <img src="assets/profile.jpg" alt="Profile Picture" class="profile-pic">
+    <h1>Hi, I'm <span>Akshitha Babburi</span></h1>
+    <p>Full Stack Developer | Java | Spring Boot | React | Cloud (AWS & Azure)</p>
+    <a href="assets/resume.pdf" target="_blank" class="btn">Download Resume</a>
+  </header>
+
+  <!-- About -->
+  <section id="about" class="container">
     <h2>About Me</h2>
     <p>
       I am a Full Stack Developer with 6+ years of experience in Java/J2EE, Spring Boot, Microservices,
@@ -96,53 +40,60 @@
     </p>
   </section>
 
-  <section id="experience">
-    <h2>Experience</h2>
-    <h3>Full Stack Developer – Sharing Innovations Tech LLC, NJ (Aug 2023 – Present)</h3>
-    <ul>
-      <li>Architected and maintained core Java + Spring Boot applications with Kafka, improving uptime by 20%.</li>
-      <li>Developed REST, SOAP, and GraphQL APIs for financial data systems.</li>
-      <li>Built React + TypeScript UIs for investment portfolio management.</li>
-      <li>Optimized SQL Server with JPA, increasing performance by 25%.</li>
-      <li>Deployed using GitLab CI, Docker, Kubernetes, AWS (EC2, S3, Lambda, DynamoDB).</li>
-    </ul>
-
-    <h3>Software Engineer – SS&C Technologies, Hyderabad (Dec 2016 – Oct 2021)</h3>
-    <ul>
-      <li>Developed online banking apps using Java 8, Spring MVC, Hibernate.</li>
-      <li>Built Angular + jQuery UIs improving customer experience.</li>
-      <li>Integrated with MongoDB & Azure services (Functions, SQL, Blob Storage).</li>
-      <li>Mentored junior developers and improved team productivity.</li>
-    </ul>
-  </section>
-
-  <section id="skills">
-    <h2>Technical Skills</h2>
-    <p><strong>Languages:</strong> Java, Python, Kotlin</p>
-    <p><strong>Frameworks:</strong> Spring Boot, Spring MVC, Hibernate, React, Angular</p>
-    <p><strong>Databases:</strong> SQL Server, PostgreSQL, MongoDB</p>
-    <p><strong>Cloud:</strong> AWS (EC2, S3, Lambda), Azure (Functions, Blob, SQL)</p>
-    <p><strong>DevOps:</strong> Docker, Kubernetes, Jenkins, GitLab CI, ELK, Prometheus</p>
-    <p><strong>Testing:</strong> JUnit, TestNG, Selenium, Mockito</p>
-  </section>
-
-  <section id="projects">
+  <!-- Projects -->
+  <section id="projects" class="container">
     <h2>Projects</h2>
-    <ul>
-      <li><strong>Investment Portfolio Management System:</strong> Built for Fidelity with real-time analytics and financial integrations.</li>
-      <li><strong>Online Banking Platform:</strong> Improved navigation, security, and customer satisfaction.</li>
-      <li><strong>Health Platform:</strong> Designed scalable REST APIs with Spring Boot, improving user satisfaction by 15%.</li>
-    </ul>
+
+    <div class="project">
+      <img src="assets/project1.png" alt="Project 1 Screenshot">
+      <div>
+        <h3>Investment Portfolio Management System</h3>
+        <p>Developed for Fidelity to provide real-time analytics, efficient portfolio management, and seamless integration with financial data sources.</p>
+        <p><strong>Tech:</strong> Java, Spring Boot, React, AWS, Docker, Kubernetes</p>
+        <a href="https://github.com/YOUR_GITHUB_USERNAME/project1" target="_blank">View on GitHub</a>
+      </div>
+    </div>
+
+    <div class="project">
+      <img src="assets/project2.png" alt="Project 2 Screenshot">
+      <div>
+        <h3>Online Banking Platform</h3>
+        <p>Enhanced navigation and customer satisfaction by developing secure banking modules and front-end features.</p>
+        <p><strong>Tech:</strong> Java 8, Spring MVC, Hibernate, Angular, Azure</p>
+        <a href="https://github.com/YOUR_GITHUB_USERNAME/project2" target="_blank">View on GitHub</a>
+      </div>
+    </div>
   </section>
 
-  <section id="contact" class="contact">
+  <!-- Skills -->
+  <section id="skills" class="container">
+    <h2>Technical Skills</h2>
+    <div class="skills-grid">
+      <span>Java</span>
+      <span>Spring Boot</span>
+      <span>React</span>
+      <span>Angular</span>
+      <span>Microservices</span>
+      <span>SQL / MongoDB</span>
+      <span>AWS</span>
+      <span>Azure</span>
+      <span>Docker</span>
+      <span>Kubernetes</span>
+      <span>JUnit</span>
+      <span>CI/CD</span>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="container">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:akshitha1705@gmail.com">akshitha1705@gmail.com</a></p>
     <p>LinkedIn: <a href="https://www.linkedin.com/in/akshitha17/" target="_blank">linkedin.com/in/akshitha17</a></p>
-    <p>GitHub: <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank">github.com/YOUR_GITHUB_USERNAME</a></p>
+    <p>GitHub: <a href="https://akshithababburi.github.io/akshitha.github.io/" target="_blank">https://akshithababburi.github.io/akshitha.github.io/</a></p>
     <p>Phone: +1 (331) 277-9739</p>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>© 2025 Akshitha Babburi</p>
   </footer>
